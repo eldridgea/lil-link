@@ -1,6 +1,9 @@
 # Lil Link
 ### A shortlink system built on Cloudflare workers
 
+<a href="https://get.lillink.co">Website</a>
+<a href="https://lillink.co">Live Demo</a>
+
 Before deploying you'll need to put your info into the `zone_id`, `account_id`, and `route` sections of `wrangler.toml`
 
 Requires 2 Workers KV Namespaces, currently hardcoded as `SHORTLINKS` and `HITS`.
