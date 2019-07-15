@@ -136,7 +136,12 @@ async function handleGetRequest(request) {
       index_page = index_page.replace(/\$ADBANNER/g, no_ad_banner)
       return rawHtmlResponse(index_page);
     }  
-  } else {
+  } else if (afterSlash === "admin") {
+      return new Response("admin stub area"); //stub out /admin for future usage so early deployments can't reserve that.
+  } else if (afterSlash.startsWith("admin/")) {
+      return new Response("admin stub area"); //stub out /admin for future usage so early deployments can't reserve that.
+  }
+    else{
     return handleRedirect(afterSlash);
   }
 }
