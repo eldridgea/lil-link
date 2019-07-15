@@ -148,7 +148,6 @@ async function handleGetRequest(request) {
   const url = request.url;
   var removeHttp = url.slice(url.indexOf("//") + 2); //removes everything before the doubleslash, e.g. http://
   var afterSlash = removeHttp.slice(removeHttp.indexOf("/") + 1); //removes everything before the slash
-  //return event.respondWith(new Response(afterSlash));
   if (afterSlash === "") {
     //if there's nothing after the slash, reurn the create shortlink form
     if (request.url.includes('//lillink.co')) {
