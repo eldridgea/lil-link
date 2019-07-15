@@ -95,6 +95,28 @@ var already_exists = `
 </html>
 `;
 
+var doesnt_exist = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1>Lil Link</h1>
+</div>
+<div class="container">
+  <div class="row">
+  <div class="col-md-12 text-center pt-4">
+    I'm sorry, the shortlink <a href="/">$SHORTLINK</a> doesn't exist. <a href="/">Create it now!</a>
+  </div>
+  </div>
+</div>
+</body>
+</html>
+`;
+
 /**
  * rawHtmlResponse delievers a response with HTML inputted directly
  * into the worker script
@@ -150,7 +172,9 @@ async function handleRedirect(shortlink) {
   const getCache = () => SHORTLINKS.get(shortlink);
   const url = await getCache();
   if (url === null) {
-    return new Response("link doesn't exist");
+    //return new Response("link doesn't exist");
+    doesnt_exist = doesnt_exist.replace(/\$SHORTLINK/g, shortlink);
+    return rawHtmlResponse(doesnt_exist);
   } else {
     const getHits = () => HITS.get(shortlink);
     const hits = await getHits();
