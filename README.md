@@ -1,7 +1,7 @@
 # Lil Link
 ### A shortlink system built on Cloudflare workers
 
-<a href="https://get.lillink.co">Website</a>
+<a href="https://get.lillink.co">Website</a> - Hosted version coming soon
 
 <a href="https://lillink.co">Live Demo</a>
 
