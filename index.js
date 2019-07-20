@@ -109,7 +109,7 @@ var doesnt_exist = `
 <div class="container">
   <div class="row">
   <div class="col-md-12 text-center pt-4">
-    I'm sorry, the shortlink <a href="/">$SHORTLINK</a> doesn't exist. <a href="/">Create it now!</a>
+    I'm sorry, that shortlink doesn't exist. <a href="/">Create it now!</a>
   </div>
   </div>
 </div>
@@ -171,7 +171,6 @@ async function handleRedirect(shortlink) {
   const getCache = () => SHORTLINKS.get(shortlink);
   const url = await getCache();
   if (url === null) {
-    //return new Response("link doesn't exist");
     doesnt_exist = doesnt_exist.replace(/\$SHORTLINK/g, shortlink);
     return rawHtmlResponse(doesnt_exist);
   } else {
