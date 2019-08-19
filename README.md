@@ -24,8 +24,8 @@ This version adds support for handling KV Namespaces via Wrangler.
 ## Configuration and Deployment
 1. Run `git clone https://github.com/eldridgea/lil-link`
 2. Create 2 KV Namespaces in the Cloudflare Dashboard or via their API.
-3. Fill out the  `zone_id`, `account_id`.
-4. Fill out the `route` section of `wrangler.toml` with `https://example.com/*`, replacing "example.com" with your domain. 
+3. Fill out the  `zone_id`, `account_id` fields in `wrangler.toml`.
+4. Fill out the `route` section in `wrangler.toml` with `https://example.com/*`, replacing "example.com" with your domain. 
 5. Paste one of your newly created KV Namespace IDs into `wrangler.toml` under `SHORTLINKS` and the other under `HITS`
 6. `cd` into the lil-link directory and run `wrangler publish --release`
 
