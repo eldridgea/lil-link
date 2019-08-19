@@ -4,3 +4,10 @@ zone_id = ""
 private = false
 account_id = ""
 route = ""
+
+[[kv-namespaces]]
+binding = "HITS"
+id = ""
+[[kv-namespaces]]
+binding = "SHORTLINKS"
+id = ""
