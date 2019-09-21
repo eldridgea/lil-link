@@ -1,13 +1,13 @@
 {
-  "name": "zelda",
-  "version": "1.0.0",
-  "description": "A template for kick starting a Cloudflare Workers project",
+  "name": "lil-link",
+  "version": "0.0.2",
+  "description": "A short link system for deplpyent on Cloudflare Workers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write '**/*.{js,css,json,md}'"
   },
-  "author": "ealexander <eldridgea@gmail.com",
+  "author": "ELdridge Alexander <eldridgea@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "husky": "^2.1.0",
