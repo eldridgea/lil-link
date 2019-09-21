@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write '**/*.{js,css,json,md}'"
   },
-  "author": "ealexander <ealexander@duosecurity.com>",
+  "author": "ealexander <eldridgea@gmail.com",
   "license": "MIT",
   "devDependencies": {
     "husky": "^2.1.0",
