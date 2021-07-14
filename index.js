@@ -37,9 +37,9 @@ var index_page = `
 `;
 
 var ad_banner = `
-<a style="display:block" href="https://get.lillink.co">
+<a style="display:block" href="https://github.com/eldridgea/lil-link">
   <div class="jumbotron text-center border">
-    <h1>Get shortlinks for your organzation!</h1>
+    <h1>Deploy shortlinks for your organzation!</h1>
     <h2>Your very own internal branded shortlinks</h2>
   </div>
 </a>
